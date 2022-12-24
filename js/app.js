@@ -13,10 +13,11 @@ const content = document.querySelector(".content");
 class App{
   constructor(){
     this._stickyNavbar();
+    this._activeLink();
+    this._toggleMobileNav(); 
   }
-  
+
   // Sticky Navbar
-  
   _stickyNavbar(){
     const navHeight = nav.getBoundingClientRect().height;
     
@@ -34,6 +35,42 @@ class App{
     if(!entry.isIntersecting) header.classList.add('sticky');
     else header.classList.remove('sticky');
 
+  }
+
+  // Navbar Link Activate
+  _activeLink(){
+    links.forEach((link) => 
+    link.addEventListener('click', (e) => {
+      const link = e.target;
+      const siblings = link.closest('.links').querySelectorAll('.link');
+
+      siblings.forEach((sibling) => {
+        if(sibling === link) sibling.style.color = "rgb(20, 184, 166)";
+        else sibling.style.color = "rgb(209, 213, 219)";
+      })
+    })) 
+  }
+
+  _toggleMobileNav(){
+    toggleBtn.addEventListener('click', () => {
+      toggleBtn.classList.contains('toggle-close') ? this._disappearMobileNav() : this._appearMobileNav();
+    })
+  }
+
+  _disappearMobileNav(){
+    toggleBtn.classList.remove('toggle-close');
+    setTimeout(() => {
+      linksContainer.classList.remove('links-open');
+    }, 300);
+    linksContainer.style.animation = "mobileNavDisappear 0.5s 1";
+    document.querySelector('html').style.overflow = "visible";
+  }
+
+  _appearMobileNav(){
+    toggleBtn.classList.add('toggle-close');
+    linksContainer.classList.add('links-open');
+    linksContainer.style.animation = "mobileNavAppear 0.5s 1";
+    document.querySelector('html').style.overflow = "hidden";
   }
 }
 
