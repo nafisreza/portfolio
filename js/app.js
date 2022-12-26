@@ -16,6 +16,7 @@ class App{
     this._activeLink();
     this._toggleMobileNav(); 
     this._tagCloud();
+    this._typewriter();
   }
 
   // Sticky Navbar
@@ -102,6 +103,21 @@ class App{
       direction: 135,
       keep: true 
     });
+  }
+
+  // Typewriter Effect
+  _typewriter(){
+    const typewriter = new Typewriter(app, {
+      loop: true,
+    })
+
+    typewriter
+  .typeString('Web Developer')
+  .pauseFor(300)
+  .deleteChars(7)
+  .typeString('signer')
+  .pauseFor(1000)
+  .start();
   }
 }
 
