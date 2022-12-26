@@ -15,6 +15,7 @@ class App{
     this._stickyNavbar();
     this._activeLink();
     this._toggleMobileNav(); 
+    this._tagCloud();
   }
 
   // Sticky Navbar
@@ -71,6 +72,36 @@ class App{
     linksContainer.classList.add('links-open');
     linksContainer.style.animation = "mobileNavAppear 0.5s 1";
     document.querySelector('html').style.overflow = "hidden";
+  }
+
+  // Skills
+  _tagCloud(){
+    const texts = [
+      'HTML',
+      'CSS',
+      'Bootstrap',
+      'Git',
+      'Github',
+      'Tailwind',
+      'JavaScript',
+      'React.js',
+      'Redux',
+      'Node.js',
+      'WordPress',
+      'MySQL',
+      'Photoshop',
+      'Illustrator',
+      'Figma',
+      'Premier Pro'
+    ];
+
+    TagCloud(".content", texts, {
+      radius: 300,
+      maxSpeed: 'fast',
+      initSpeed: 'normal',
+      direction: 135,
+      keep: true 
+    });
   }
 }
 
