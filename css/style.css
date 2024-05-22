@@ -458,6 +458,15 @@ body {
   color: var(--color-white);
 }
 
+.cta a {
+  position: relative;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
 .cta svg {
   position: relative;
   top: 0;
