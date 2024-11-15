@@ -159,6 +159,7 @@ export const projectsSection: ProjectsSectionType = {
   title: 'my projects',
   projects: [
     {
+      year: 2024,
       id: getId(),
       name: 'Guideasy - Travel App',
       url: 'https://www.guideasy.com/',
