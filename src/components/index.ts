@@ -8,8 +8,6 @@ import ProjectCard from './ProjectCard';
 import SEO from './SEO';
 import ShowLottie from './ShowLottie';
 import Sidebar from './Sidebar';
-import Skill from './Skill';
-import SkillIcon from './SkillIcon';
 import SocialIcon from './SocialIcon';
 import SocialLink from './SocialLink';
 import Tablist from './Tablist';
@@ -19,12 +17,10 @@ export {
   Button,
   NavButton,
   ShowLottie,
-  SkillIcon,
   ListItem,
   HeroImage,
   Sidebar,
   SocialLink,
-  Skill,
   Tablist,
   Wrapper,
   SocialIcon,

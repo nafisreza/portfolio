@@ -5,7 +5,6 @@ import {
   Experience,
   Hero,
   Contact,
-  // Projects,
   Layout,
   Projects,
 } from '../containers';
@@ -18,7 +17,6 @@ const Home: NextPage = () => {
       <Layout>
         <Hero />
         <About />
-        {/* <Skills /> */}
         <Experience />
         <Projects />
         <Contact />

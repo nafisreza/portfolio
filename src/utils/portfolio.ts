@@ -6,7 +6,6 @@ import {
   HeroSectionType,
   NavbarSectionType,
   ProjectsSectionType,
-  SkillsSectionType,
   SocialSectionType,
 } from '../types/sections';
 import { StringKeyValueType } from '../types';
