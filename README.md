@@ -36,8 +36,6 @@
 
 1. Fork this repository and clone the project
 
-###### Please give me proper credit by linking back to [gaurav-sarage.vercel.app](https://gaurav-sarage.vercel.app/).
-
 ```bash
   git clone https://github.com/nafisreza/portfolio
 ```
